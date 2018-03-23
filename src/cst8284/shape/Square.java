@@ -13,20 +13,19 @@ public class Square extends BasicShape {
     // TODO Auto-generated constructor stub
   }
   
-  public Circle(double width) {
+  public Square(double width) {
     super.setWidth(width);
   }
   
-  public Circle(Circle circle) {
-    this(circle.getWidth());
+  public Square(Square square) {
+    this(square.getWidth());
   }
   /* (non-Javadoc)
    * @see cst8284.shape.BasicShape#getArea()
    */
   @Override
   public double getArea() {
-    // TODO Auto-generated method stub
-    return 0;
+    return this.getWidth() * this.getWidth();
   }
 
   /* (non-Javadoc)
@@ -34,8 +33,19 @@ public class Square extends BasicShape {
    */
   @Override
   public double getPerimeter() {
-    // TODO Auto-generated method stub
-    return 0;
+    return this.getWidth() * 4;
   }
 
+  // TODO test
+  @Override
+  public String toString(){
+    return ("Square Overrides " + super.toString());
+  }
+ 
+  // TODO test
+  public boolean equals(Object that) {
+    return (that instanceof Square &&
+            this.getWidth() == ((Square) that).getWidth());
+  }
+  
 }

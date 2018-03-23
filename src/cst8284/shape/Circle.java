@@ -44,10 +44,8 @@ public class Circle extends BasicShape {
 
   // TODO test
   public boolean equals(Object that) {
-    if (that instanceof Circle &&
-        this.getWidth() == ((Circle) that).getWidth())
-      return true;
-    return false;
+    return (that instanceof Circle &&
+            this.getWidth() == ((Circle) that).getWidth());
   }
 
 }
