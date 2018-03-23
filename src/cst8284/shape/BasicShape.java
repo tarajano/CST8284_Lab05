@@ -2,7 +2,7 @@ package cst8284.shape;
 
 public abstract class BasicShape {
 	
-	private double width = 1; // Page 3. "assume a default value of 1.0 for the width and height"
+	private double width; // Page 3. "assume a default value of 1.0 for the width and height"
 	
 	public double getWidth(){return width;}
 	public void setWidth(double width){this.width = width;}

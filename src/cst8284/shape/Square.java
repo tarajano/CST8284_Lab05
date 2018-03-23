@@ -10,7 +10,7 @@ package cst8284.shape;
 public class Square extends BasicShape {
 
   public Square() {
-    // TODO Auto-generated constructor stub
+    this(1); // default width to 1.
   }
   
   public Square(double width) {
