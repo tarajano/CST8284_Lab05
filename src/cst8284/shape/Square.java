@@ -14,7 +14,7 @@ public class Square extends BasicShape {
   }
   
   public Square(double width) {
-    super.setWidth(width);
+    this.setWidth(width);
   }
   
   public Square(Square square) {

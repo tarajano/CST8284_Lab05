@@ -14,7 +14,7 @@ public class Circle extends BasicShape {
   }
   
   public Circle(double width) {
-    super.setWidth(width);
+    this.setWidth(width/2); // radius = width/2 
   }
   
   public Circle(Circle circle) {

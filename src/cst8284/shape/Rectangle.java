@@ -7,7 +7,7 @@ package cst8284.shape;
  * @author Manuel Alonso Tarajano (tarajano@gmail.com)
  * Mar 23, 2018  
  */
-public class Rectangle extends BasicShape {
+public class Rectangle extends Square {
   
   private double height;
 
@@ -19,7 +19,7 @@ public class Rectangle extends BasicShape {
   }
 
   public Rectangle(double width, double height) {
-    super.setWidth(width);
+    this.setWidth(width);
     this.setHeight(height);
   }
 
@@ -40,7 +40,7 @@ public class Rectangle extends BasicShape {
    */
   @Override
   public double getArea() {
-    return super.getWidth() * this.getHeight();
+    return this.getWidth() * this.getHeight();
   }
 
   /* (non-Javadoc)
@@ -48,7 +48,7 @@ public class Rectangle extends BasicShape {
    */
   @Override
   public double getPerimeter() {
-    return 2 * (this.getHeight() + super.getWidth());
+    return 2 * (this.getHeight() + this.getWidth());
   }
 
   // TODO test
@@ -60,7 +60,9 @@ public class Rectangle extends BasicShape {
   // TODO test
   @Override
   public boolean equals(Object that) {
-    return (super.equals(that) && // <-- are both Square with equal width ?
-            this.getHeight() == ((Rectangle) that).getHeight());
+    return (that instanceof Rectangle && // both Squares ?
+            super.equals(that) &&  // equal widths?
+            this.getHeight() == ((Rectangle) that).getHeight() // equal heights?
+            );
   }
 }
