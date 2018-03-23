@@ -9,16 +9,21 @@ package cst8284.shape;
  */
 public class Circle extends BasicShape {
 
+  /* 
+   * In Circle class, the width is equivalent to the circle's perimeter.
+   * This is reflected in the computation of circle's area and perimeter.  
+   */
+  
   public Circle() {
-    this(1.0);  // default width = 1
+    this(1.0);  // default width = diameter = 1
   }
   
   public Circle(double width) {
-    this.setWidth(width/2); // radius = width/2 
+    this.setWidth(width); 
   }
   
   public Circle(Circle circle) {
-    this(circle.getWidth());
+    this(circle.getWidth()); 
   }
 
   /* (non-Javadoc)
@@ -26,7 +31,7 @@ public class Circle extends BasicShape {
    */
   @Override
   public double getArea() {
-    return this.getWidth() * this.getWidth() * Math.PI;
+    return Math.pow(this.getWidth()/2, 2) * Math.PI;
   }
 
   /* (non-Javadoc)
@@ -34,7 +39,7 @@ public class Circle extends BasicShape {
    */
   @Override
   public double getPerimeter() {
-    return 2 * this.getWidth() * Math.PI;
+    return this.getWidth() * Math.PI;
   }
   
   // TODO test

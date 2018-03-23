@@ -26,7 +26,6 @@ public class TestBasicShape {
 	    System.out.println("The rectangle and the square are " + (rect1.equals(square)?"":"not ") + "equal");
 	    System.out.println("Rectangles 1 and 2 are " + (rect2.equals(rect1)?"":"not ") + "equal");
 	    System.out.println("Rectangles 2 and 3 are " + (rect2.equals(rect3)?"":"not ") + "equal");
-	    
 	}
 	
 
