@@ -10,7 +10,7 @@ package cst8284.shape;
 public class Square extends BasicShape {
 
   public Square() {
-    this(1); // default width to 1.
+    this(1.0); // default width = 1
   }
   
   public Square(double width) {

@@ -15,7 +15,7 @@ public class Rectangle extends BasicShape {
    * 
    */
   public Rectangle() {
-    this(1,1); // default width and height to 1
+    this(1.0, 1.0); // default width and height to 1
   }
 
   public Rectangle(double width, double height) {
@@ -24,8 +24,7 @@ public class Rectangle extends BasicShape {
   }
 
   public Rectangle(Rectangle rectangle) {
-    super.setWidth(rectangle.getWidth());
-    this.setHeight(rectangle.getHeight());
+    this(rectangle.getWidth(), rectangle.getHeight());
   }
   
   public void setHeight(double height){
@@ -41,7 +40,7 @@ public class Rectangle extends BasicShape {
    */
   @Override
   public double getArea() {
-    return this.getWidth() * this.getHeight();
+    return super.getWidth() * this.getHeight();
   }
 
   /* (non-Javadoc)
@@ -49,7 +48,7 @@ public class Rectangle extends BasicShape {
    */
   @Override
   public double getPerimeter() {
-    return 2 * (this.getHeight() + this.getWidth());
+    return 2 * (this.getHeight() + super.getWidth());
   }
 
   // TODO test
@@ -61,7 +60,7 @@ public class Rectangle extends BasicShape {
   // TODO test
   @Override
   public boolean equals(Object that) {
-    return (super.equals(that) && // <-- are both squares with equal widths ?
-            this.getHeight()  == ((Rectangle) that).getHeight());
+    return (super.equals(that) && // <-- are both Square with equal width ?
+            this.getHeight() == ((Rectangle) that).getHeight());
   }
 }

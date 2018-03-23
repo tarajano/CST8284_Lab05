@@ -9,7 +9,9 @@ package cst8284.shape;
  */
 public class Circle extends BasicShape {
 
-  public Circle() {}
+  public Circle() {
+    this(1.0);  // default width = 1
+  }
   
   public Circle(double width) {
     super.setWidth(width);
